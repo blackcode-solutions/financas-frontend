@@ -1,0 +1,26 @@
+.inputComponent, .inputDisable {
+    padding: 0.3rem 1rem;
+    width: 100%;
+    justify-content: center;
+    border: none;
+    outline: none;
+    border-radius: 12px;
+    color: #3F3D56;
+    font-size: .875rem;
+    border: solid 1px #CED4DA;
+    height: 34px;
+    font-weight: 500;
+    color: #333;
+    background-color: #fff;
+   
+    &:focus{
+        border: 2px solid #4F39F6;
+        // box-shadow: 0 0 2px 2px #41B06E;
+    }
+
+}
+
+.inputDisable {
+    opacity: 35%;
+    cursor: no-drop;
+}

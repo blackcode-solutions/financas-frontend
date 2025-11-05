@@ -1,0 +1,318 @@
+.header {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    min-height: 51px;
+    color: #7c42e0;
+    right: 0px;
+
+    .containerLogo {
+        // background-color: #7c42e0;
+        padding: 0.7rem 0.4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+
+    nav {
+        width: 100%;
+        height: 100%;
+    }
+
+    .containerInfosUsuarios {
+        padding: 0.5rem 0.7rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+        box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.1019607843);
+        background-color: white;
+        justify-content: space-between;
+
+        @media(max-width:939px) {
+            align-items: flex-start;
+            gap: 0.1rem;
+        }
+
+        .funcsUser {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+
+
+
+            .containerUser {
+                cursor: pointer;
+
+                .containerInput {
+                    display: flex;
+                    gap: 0.3rem;
+                    align-items: center;
+                    background-color: white;
+                    padding: .5rem 1rem;
+                    box-shadow: 0px 0px 17px 5px #0000001A;
+                    border-radius: 30px;
+                    min-width: 335px;
+
+                    @media(max-width:939px) {
+                        min-width: 40%;
+                    }
+
+                    input {
+                        height: 100%;
+                        width: 100%;
+                        outline: none;
+                        background-color: white;
+                        border: none;
+                        min-height: 32px;
+                        min-width: 330px;
+
+                        @media(max-width:939px) {
+                            min-height: 32px;
+                            min-width: 40%;
+                        }
+                    }
+                }
+
+                span {
+                    display: flex;
+                    align-items: center;
+                    font-size: 14px;
+                    gap: 0.3rem;
+                    font-weight: 700;
+                }
+
+                padding-left: 0.7rem;
+            }
+        }
+
+        .containerBreadCrumb {
+            margin-left: 14.5rem;
+
+            @media(max-width:939px) {
+                margin-left: 1rem;
+                display: none;
+
+            }
+
+            span {
+                font-size: 16px;
+                cursor: pointer;
+                font-weight: 600;
+                line-height: 16.41px;
+                color: #7c42e0;
+                cursor: pointer;
+
+            }
+        }
+
+        .containerBreadCrumbHambuguer {
+            span {
+                font-size: 16px;
+                cursor: pointer;
+                font-weight: 600;
+                line-height: 16.41px;
+                color: #7c42e0;
+                cursor: pointer;
+
+            }
+
+            @media(min-width:939px) {
+                display: none;
+            }
+        }
+
+    }
+}
+
+.dashboard,
+.dashboardActive {
+    gap: 0.5rem;
+    position: relative;
+    // position: absolute;
+    left: 0px;
+    height: 100vh;
+    min-width: 209px;
+    box-shadow: 0px 0px 17px 4px #0000001A;
+    top: 0px;
+    background-color: #7c42e0;
+
+    @media(max-width:939px) {
+        display: none;
+        width: 0px;
+    }
+
+    .containerArrowBack {
+        position: absolute;
+        top: 10px;
+        right: 1px;
+        cursor: pointer;
+
+        svg {
+            color: #7c42e0
+        }
+
+        ;
+
+        @media(min-width:939px) {
+            display: none;
+        }
+    }
+
+    .containerLogo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem 0.3rem 0.6rem 0.3rem;
+        border-bottom: 1px solid white;
+        margin-bottom: 1.5rem;
+    }
+
+    .loginUser {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 0.2rem;
+
+        div {
+            span {
+                font-weight: 300;
+                color: white;
+            }
+        }
+    }
+
+    .containerAside {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        // height: 53vh;
+    
+
+        @media(min-width:1400px) {
+            height: 62vh;
+        }
+    }
+
+    .aside {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        // padding-top: 1rem;
+        gap: .3rem;
+
+        .containerCardPage,
+        .containerCardPageActive {
+            cursor: pointer;
+            padding: 0.6rem 0.6rem;
+            border-radius: 0.25rem;
+            display: flex;
+            align-items: center;
+            // justify-content: space-between;
+            // justify-content: center;
+            min-width: 90%;
+            max-width: 90%;
+            gap: 0.3rem;
+            color: #FFF !important;
+
+            &:hover {
+                background-color: #FFF;
+                color: #765ABD !important;
+                transition: all 0.2s ease-in-out;
+            }
+
+            .name{
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 0.5rem;
+                width: 100%;
+                color: #FFF !important;
+                border: 1px solid black;
+
+                &:hover {
+                    color: #765ABD !important;
+                }
+            }
+
+            // div {
+            //     display: flex;
+            //     align-items: center;
+            //     justify-content: flex-start;
+            //     gap: 0.5rem;
+            //     width: 100%;
+            //     color: #fff !important;
+
+            //     // &:hover {
+            //     //     color: #765ABD;
+            //     // }
+              
+            // }
+
+            // span {
+            //     font-size: .9rem;
+            //     font-weight: 400;
+            //     color: #FFF;
+            //     width: 100%;
+
+            //     &:hover {
+            //         color: #765ABD;
+            //     }
+               
+            // }
+
+            // svg {
+            //     cursor: pointer;
+            //     color: white;
+            // }
+
+          
+        }
+
+        .containerCardPageActive {
+            background-color: #FFF;
+            color: #765ABD !important;
+
+            // span {
+            //     font-size: .9rem;
+            //     font-weight: 400;
+            //     color: white;
+            // }
+
+            // svg {
+            //     cursor: pointer;
+            //     color: white !important;
+            // }
+        }
+    }
+}
+
+.dashboardActive {
+    width: 100%;
+    height: 100vh;
+    display: block;
+    position: fixed;
+    z-index: 9999;
+}
+
+.containerGeral {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.containerButtonExit {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: absolute;
+    bottom: 40px;
+}

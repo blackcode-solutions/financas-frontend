@@ -1,0 +1,165 @@
+
+
+.containerButtons{
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.03);
+    padding: .5rem 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+}
+
+.containerMain{
+    height: 87vh;
+    width: 100%;
+    overflow: auto;
+
+    @media(max-width:1400px){
+        height: 84.5vh;
+    }
+    @media(max-width:1600px) and (min-width:1401px){
+        height: 84vh;
+    }
+}
+
+.containerTotais{ 
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.3rem;
+    margin-top: 0.5rem;
+}
+.containerTotalPagoPendente{
+    padding: 1rem;
+    background-color: rgba(237, 255, 243, 0.89);
+    border-radius: 0.30rem;
+    display: flex;
+    gap: 0.3rem;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #38a162;
+    border-radius: 5px;
+    
+    height: 54px;
+    span{
+        font-weight: 500;
+        line-height: 18.75px;
+        font-size: 13px;
+        color:#38a162;
+        width: 100%;
+        height: 100%;
+        // font-family: Roboto;
+
+        
+
+    }
+
+}
+
+.flexCol{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    span{
+        font-size: 17px;
+        @media(max-width:1400px){
+            font-size: 12.5px;
+        }
+    }
+}
+.containerIconMoney{
+    background-color: #38a162;
+    clip-path: circle();
+    padding: 0.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerGraphics {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 .5rem;
+    justify-content: space-between;
+
+    @media(max-width:900px) {
+        flex-direction: column;
+    }
+
+    .graphic {
+        width: 32.5%;
+        padding: 1rem 1.5rem !important;
+        background-color: #fff;
+        border-radius: 12px;
+        box-shadow: 5px 10px 15px -3px rgba(0,0,0,0.1);
+        height: 302px;
+
+        @media(max-width:900px) {
+            width: 100%;
+        }
+    }
+    .lastGraphic {
+        @media(max-width:900px) {
+            margin-bottom: 3rem !important;
+        }
+    }
+
+}
+
+.containerData {
+    padding: 1rem 1.5rem !important;
+    background-color: #fff;
+    background-clip: border-box;
+    box-shadow: 5px 10px 15px -3px rgba(0,0,0,0.1);
+    border-radius: .25rem;
+    width: 36%;
+    max-width: 32.4%;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    min-height: 296px;
+
+    @media(max-width:800px) {
+        width: 24%;
+    }
+
+    @media(max-width:715px) {
+        width: 30%;
+        max-width: 30%;
+    }
+
+    @media(min-width:1500px) {
+        width: 32.5%;
+        max-width: 32.5%;
+    }
+    
+
+    span {
+        font-size: .85rem;
+        letter-spacing: .15px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+        color: #718398 ;
+        text-align: left;
+    }
+
+    .numberGraphics {
+        text-align: center;
+        font-family: 'Roboto', sans-serif;
+        height: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        h4 {
+            font-weight: 700;
+            font-size: 2.125rem;
+            margin: 1rem;
+            color: #7c42e0;
+        }
+    }
+}

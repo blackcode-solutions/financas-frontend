@@ -1,0 +1,206 @@
+
+
+
+
+body{
+  overflow: hidden;
+  padding: 0rem;
+  overflow: 0rem;
+}
+.popUpmessage{
+  z-index: 999999 !important;
+}
+.swal2-shown{
+  z-index: 999999 !important;
+
+}
+.rs-calendar-panel .rs-calendar-table-cell-is-today .rs-calendar-table-cell-day{
+  color: #fff;
+    color: white;
+    width: 20px;
+    height: 20px;
+    background-color: #7c42e0 !important;
+    /* background-color: var(--rs-calendar-today-bg); */
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.rs-calendar-panel .rs-calendar-table-cell-selected .rs-calendar-table-cell-content{
+  box-shadow: inset 0 0 0 1px #7c42e0 !important;
+
+}
+
+.p-progress-spinner-circle {
+  stroke: #7c42e0 !important;
+}
+.headerTable{
+  background-color: #F3F5F7;
+  color: #4a4a4a;
+  font-size: 9pt;
+  font-weight: bold;
+}
+
+.headerTable:hover{
+  background-color: #F3F5F7;
+  color: white;
+  font-size: 9pt;
+  font-weight: bold;
+}
+
+.ag-grid-dre {
+  background-color: #fff;
+  color: #333;
+
+ 
+}
+.ag-header-group-cell:not(.ag-column-resizing) + .ag-header-group-cell:not(.ag-column-hover):not(.ag-header-cell-moving):hover, .ag-header-group-cell:not(.ag-column-resizing) + .ag-header-group-cell:not(.ag-column-hover).ag-column-resizing, .ag-header-cell:not(.ag-column-resizing) + .ag-header-cell:not(.ag-column-hover):not(.ag-header-cell-moving):hover, .ag-header-cell:not(.ag-column-resizing) + .ag-header-cell:not(.ag-column-hover).ag-column-resizing, .ag-header-group-cell:first-of-type:not(.ag-header-cell-moving):hover, .ag-header-group-cell:first-of-type.ag-column-resizing, .ag-header-cell:not(.ag-column-hover):first-of-type:not(.ag-header-cell-moving):hover, .ag-header-cell:not(.ag-column-hover):first-of-type.ag-column-resizing{
+  background-color: #fff !important;
+  }
+.ag-theme-alpine, .ag-theme-alpine  {
+  --ag-header-height: 33px !important;
+  --ag-selected-row-background-color:#e0e0e0 !important;
+  --ag-row-hover-color: #e0e0e0 !important;
+  --ag-quartz-active-color: transparent !important;
+  /* --ag-header-foreground-color: white;
+  --ag-header-background-color: black;
+  --ag-header-cell-hover-background-color: black;
+  --ag-header-cell-moving-background-color: black ; */
+  --ag-grid-size: 3px !important;
+  --ag-list-item-height: 33px !important;
+  --ag-row-height: 33px !important;
+  --ag-borders: none !important;
+
+  --ag-checkbox-background-color: white !important;
+  --ag-checkbox-checked-color: blue !important;
+  --ag-checkbox-unchecked-color: grey !important;
+  --ag-header-column-resize-handle-color: hsla(0, 0%, 100%, 0.322) !important;
+  --ag-checkbox-indeterminate-color: grey !important;
+}
+.ag-header-group-cell:not(.ag-column-resizing) + .ag-header-group-cell:not(.ag-column-hover):not(.ag-header-cell-moving):hover, .ag-header-group-cell:not(.ag-column-resizing) + .ag-header-group-cell:not(.ag-column-hover).ag-column-resizing, .ag-header-cell:not(.ag-column-resizing) + .ag-header-cell:not(.ag-column-hover):not(.ag-header-cell-moving):hover, .ag-header-cell:not(.ag-column-resizing) + .ag-header-cell:not(.ag-column-hover).ag-column-resizing, .ag-header-group-cell:first-of-type:not(.ag-header-cell-moving):hover, .ag-header-group-cell:first-of-type.ag-column-resizing, .ag-header-cell:not(.ag-column-hover):first-of-type:not(.ag-header-cell-moving):hover, .ag-header-cell:not(.ag-column-hover):first-of-type.ag-column-resizing{
+  background-color: #F3F5F7 !important;
+  color: #4a4a4a;;
+}
+.headerIcon{
+  background-color: #7c42e0;
+  color: white;
+  width: 31px !important;
+  font-size: 9pt;
+}
+.ag-row-focus{
+  background-color: #e0e0e0 !important;
+}
+.ag-theme-alpine .ag-header {
+  font-size: 9pt;
+  font-family: sans-serif;
+
+}
+.ag-theme-alpine .ag-header-group-cell {
+    font-weight: normal;
+    font-size: 22px;
+}
+.ag-theme-alpine .ag-header-cell {
+    font-size: 9pt;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #7c42e0;
+  box-shadow: none;
+  -webkit-box-shadow: none;
+}
+
+.ag-theme-alpine .ag-icon-menu {
+  color: hsla(0, 0%, 100%, 0.322) !important;
+}
+.ag-icon-desc{
+  color: white !important;
+}
+.ag-icon-asc{
+  color: white !important;
+
+}
+
+.fieldsetContainer {
+  border: 1px solid #000a991a;
+  background-color: #fff;
+  border-radius: 12px;
+  margin: 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+.table-title {
+  padding: 0.6rem;
+  font-weight: 600;
+  color: #7c42e0;
+  font-size: 0.875rem;
+  border-bottom: 1px solid #f3f5f7;
+  margin: 0;
+}
+
+.fieldsetTitle {
+  margin-top: 0;
+  margin-bottom: 0.01rem;
+  font-size: .85rem;
+  color: #7c42e0;
+  font-weight: 700;
+}
+/*  */
+
+.ag-ltr .ag-cell-focus:not(.ag-cell-range-selected):focus-within, .ag-ltr .ag-context-menu-open .ag-cell-focus:not(.ag-cell-range-selected), .ag-ltr .ag-full-width-row.ag-row-focus:focus .ag-cell-wrapper.ag-row-group, .ag-ltr .ag-cell-range-single-cell, .ag-ltr .ag-cell-range-single-cell.ag-cell-range-handle, .ag-rtl .ag-cell-focus:not(.ag-cell-range-selected):focus-within, .ag-rtl .ag-context-menu-open .ag-cell-focus:not(.ag-cell-range-selected), .ag-rtl .ag-full-width-row.ag-row-focus:focus .ag-cell-wrapper.ag-row-group, .ag-rtl .ag-cell-range-single-cell, .ag-rtl .ag-cell-range-single-cell.ag-cell-range-handle{
+  border: transparent;
+}
+
+.css-17zyrf6-control{
+  box-shadow: #7c42e0;
+}
+
+/* Custom styles for Calendar cells */
+.rs-calendar-panel:not(.rs-calendar-compact) .rs-calendar-table-row:not(.rs-calendar-table-header-row) .rs-calendar-table-cell-content {
+  height: 10.2dvh !important; /* 5% of the viewport height */
+
+  
+}
+@media (max-width: 1400px) {
+  .rs-calendar-panel:not(.rs-calendar-compact) .rs-calendar-table-row:not(.rs-calendar-table-header-row) .rs-calendar-table-cell-content {
+    height: 9dvh !important; /* 9% of the viewport height */
+  }
+}
+
+
+
+@media (max-width: 1000px) {
+  .rs-calendar-panel:not(.rs-calendar-compact) .rs-calendar-table-row:not(.rs-calendar-table-header-row) .rs-calendar-table-cell-content {
+    height: 3vh !important; /* 3% of the viewport height */
+  }
+}
+
+@media (max-width: 600px) {
+  .rs-calendar-panel:not(.rs-calendar-compact) .rs-calendar-table-row:not(.rs-calendar-table-header-row) .rs-calendar-table-cell-content {
+    height: 2vh !important; /* 2% of the viewport height */
+  }
+}
+
+.p-dialog-content{
+  padding: 0 0.5rem .5rem .5rem;
+}
+
+
+.label{
+  font-size: .75rem;
+  cursor: pointer;
+  user-select: none;
+  color: #666;
+  font-weight: 500;
+}
+
+
+/* Dialog */
+.p-dialog .p-dialog-header{
+  padding:  1.1rem 1.5rem;
+}

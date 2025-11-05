@@ -1,0 +1,9 @@
+
+
+.table{
+    height: 27dvh;
+
+    @media(max-width:1400px){
+        height: 23dvh;
+    }
+}

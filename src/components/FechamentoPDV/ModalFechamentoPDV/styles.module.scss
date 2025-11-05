@@ -1,0 +1,67 @@
+
+
+.containerInput {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+}
+
+.containerInputs{
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+.containerTotais{ 
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.3rem;
+    margin-top: 0.5rem;
+}
+
+.containerTotalPagoPendente{
+    padding: .5rem .6rem;
+    background-color: #c8f7c8;//c8f7c8
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 0.3rem;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 12px;
+    height: 40px;
+
+    span{
+        font-weight: 500;
+        font-size: 13px;
+        color:#2e7d32;
+        width: 100%;
+        height: 100%;
+        font-weight: bold;
+    }
+
+}
+
+.flexCol{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    span{
+        font-size: 17px;
+        @media(max-width:1400px){
+            font-size: 13.5px;
+        }
+    }
+}
+
+.containerIconMoney{
+    background-color: #2e7d32;
+    clip-path: circle();
+    padding: 0.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

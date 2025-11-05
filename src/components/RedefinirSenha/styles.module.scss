@@ -1,0 +1,191 @@
+
+
+.containerMain{
+    height: 99.5vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+    overflow: hidden;
+
+}
+
+.containerForm {
+    width: 43%;
+    height: 96.6vh;
+    // width: 40vw;
+    padding: 0.5rem;
+    box-shadow: 5px 0px 7px 4px #0000001A;
+    // background-color: #FBFAFA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    .containerContent {
+        width: 65%;
+        height: 100%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media(max-width:821px) {
+            width: 80%;
+        }
+
+        .containerFormulario {
+            margin-top: -2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            width: 26vw;
+            flex-direction: column;
+            justify-content: center;
+
+            @media(min-width:1400px) {
+                gap: .75rem;
+            }
+            @media(max-width:550px){
+                width: 71vw;
+            }
+
+            .containerInputs {
+                display: flex;
+                align-items: center;
+                gap: 1.3rem;
+                flex-direction: column;
+                width: 100%;
+
+                .containerInput {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.3rem;
+
+                    label{
+                        font-size: 0.9rem;
+                        font-weight: bold;
+                        color: #3F3D56;
+                    }
+                }
+
+            }
+        }
+
+
+    }
+
+    @media(max-width:821px) {
+        width: 100%;
+    }
+}
+
+.containerInfoSenha {
+    text-align: right;
+    display: flex;
+    width: 100%;
+    padding: 0 .5rem;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Roboto, sans-serif;
+
+    @media(max-width:821px) {
+        flex-direction: column;
+        justify-content: left;
+        align-items: normal;
+
+        a {
+            text-align: left;
+        }
+    }
+
+    a {
+        outline: none;
+        text-decoration: none;
+        color: #757575;
+        margin-top: -0.2rem;
+    }
+}
+
+.containerDireitosReservados {
+    font-family: Roboto, sans-serif;
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    width: 65%;
+    color: #757575;
+
+    @media(max-width:600px) {
+        bottom: 35px;
+        width: 75%;
+    }
+}
+
+.containerButtons {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    width: 100%;
+
+    div {
+        width: 100%;
+    }
+}
+
+.containerMessage {
+    width: 57%;
+    height: 96.6vh;
+    padding: 0.5rem;
+    background-color: #FBFAFA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+
+    .containerContent {
+        width: 63%;
+        height: 60%;
+        margin: auto;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+
+        .Image {
+            width: 80%;
+            height: 500px;
+        }
+
+        h1 {
+            font-size: 2.25rem;
+            font-weight: 800;
+            color: #3F3D56;
+            margin-bottom: -1rem;
+            margin-top: 0rem;
+
+            span {
+                color: #41B06E;
+            }
+        }
+
+        @media(min-width:1400px) {
+            h1 {
+                font-size: 2.75rem;
+            }
+        }
+    }
+
+    .divFinal {
+        background-color: #41B06E;
+        height: 8px;
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+    }
+
+    @media(max-width:821px) {
+        display: none;
+    }
+}

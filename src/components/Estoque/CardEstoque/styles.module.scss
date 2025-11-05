@@ -1,0 +1,35 @@
+
+
+.containerCard{
+    border-radius: 12px;
+    border: 1px solid #ced4da;
+    padding: .7rem .5rem;
+    width: 20vw;
+    height: 100px;
+    // background-color: #d1e9db2f ;
+    background-color: #e3eee82f ;
+
+    @media(max-width:1400px){
+     height: 110px;
+     width: 27vw;
+
+    }
+
+}
+
+
+.containerInfo{
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    font-weight: bold;
+    padding-bottom: 0.2rem;
+    font-size: 0.85rem;
+    color: #464545;
+}
+
+.containerFlexData{
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}

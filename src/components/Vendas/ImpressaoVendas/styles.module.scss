@@ -1,0 +1,260 @@
+
+
+
+.containerPrint{
+    font-family: Arial, sans-serif;
+    // height: 75vh;
+    padding: 15px 15px 50px 15px !important;
+    margin: 0 auto;
+    // min-width: 808px;
+    // max-width: 809px;
+    overflow: auto;
+    background-color: white;
+
+    .headerContainer {
+        display: flex;
+        justify-content: space-between;
+        padding: 5px;
+        // border-bottom: 4px solid #333;
+        
+        .headerLeft {
+            display: flex;
+            gap: 15px;
+            font-size: 14px;
+            // font-weight: 700;
+            
+                .logo {
+                    display: flex;
+                    align-items: center;
+                }
+    
+                .infoEmpresa {
+                    display: flex; 
+                    flex-direction: column;
+                    gap: 5px;
+                    // border-left: 1px solid #333;
+                    // padding-left: 15px;
+                }
+        }
+    
+        .headerRight {
+            display: flex;
+            gap: 5px;
+            flex-direction: column;
+            font-size: 12px;
+            text-align: right;
+            // align-self: end;
+            position: relative;
+            width: 240px;
+        }
+    }
+}
+
+.procedimentosContainer {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+    gap: 15px;
+
+    .procedimentos {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+
+    .titleProcedimentos {
+        background-color: #333;
+        text-align: left;
+        padding: 5px ;
+        color: white;
+        font-weight: 700;
+    }
+
+    .tableProc {
+        width: 100%;
+        table-layout: 'fixed';
+        border-collapse: collapse;
+        
+        th, td {
+            padding: 3px 0;
+        }
+
+        .textRight {
+            text-align: right;
+            padding-right: 15px;
+            white-space: nowrap;
+            position: relative;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            max-width: 80px;
+        }
+
+        .textLeft {
+            padding-left: 15px;
+            white-space: nowrap;
+            position: relative;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            max-width: 80px;
+
+        }
+
+        .tableHeader {
+            color: #fff;
+            text-align: left;
+            padding: 2px 15px 2px 0;
+            border-bottom: 1px solid #333;
+            color: #333;
+            background: #efefef;
+        }
+    }
+
+    .total {
+        font-weight: 700;
+        border-top: solid thin #949494;
+    }
+
+}
+.containerTotais  {
+    .totais {
+        display: flex;
+        gap: 15vw;
+        color: #fff;
+        font-weight: 700;
+        justify-content: flex-end;
+        padding: 5px 15px 5px 0;
+    }
+
+    .totais {
+        color: #fff;
+        background-color: #333;
+    }
+}
+
+
+.footer {
+    border-top: solid thin #949494;
+    margin-top: 50px;
+    font-size: 12px;
+    padding: 5px 0;
+    display: flex;
+    justify-content: end;
+}
+
+.containerInfos{
+    width: 40%;
+    display: flex;
+    margin: auto;
+    gap: 0.2rem;
+    flex-direction: column;
+    
+}
+.containerInfoResumo{
+    font-family: sans-serif;
+    background: #efefef;
+    border: 2px solid #cfcece;
+    border-radius: 4px;
+    padding: 0rem 0.5rem ;
+    height: 95%;
+    overflow: auto;
+
+}
+
+.warn{
+    font-size: 0.8rem;
+    color: black;
+    width: 110px;
+    text-align: right;
+    line-height: 13px;
+
+}
+.iconTotal{
+    font-style: normal;
+    font-size: 0.8rem;
+
+    color: black;
+    width: 110px;
+    text-align: right;
+    line-height: 13px;
+
+
+}
+.iconInfo{
+    font-size: 0.8rem;
+    color: black;
+    width: 110px;
+    text-align: right;
+    line-height: 13px;
+
+}
+.divContainer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.1rem;
+
+}
+
+.divFormasPagamentos{
+    min-width: 100px;
+    text-align: left;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: #888574;
+    line-height: 15px;
+
+}
+
+.line{
+    width: 100%;
+    border: 1px solid #DCDACD;
+    margin-bottom: 5px ;
+    margin-top: 5px;
+}
+
+@media print {
+
+    .containerPrint {
+        padding: 15px 15px 50px 15px !important;
+        margin-bottom: 50px;
+        page-break-after: always;
+
+        .tableHeader{
+            display:table-header-group !important;
+
+            .teste{
+                height: 5.9rem !important;
+                background-color: white;
+            }
+
+        }
+        tr{page-break-inside:avoid;}
+        
+    }
+    .footer {
+        position: fixed;
+        z-index: 9;
+        bottom: 5px;
+        border-top: solid thin #949494;
+        margin-top: 50px;
+        font-size: 12px;
+        display: flex;
+        justify-content: end;
+        width: 96%;
+        padding: 5px 0;
+        flex-direction: row;
+        z-index: 9;
+        page-break-after: always;
+    }
+    .footerSpace{
+        height: 25px;
+        display:table-footer-group !important;
+    }
+    .headerContainer{
+        position: fixed;
+        top: 5px;
+        width: 97%;
+        margin: auto;
+    }
+}
