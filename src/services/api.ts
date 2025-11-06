@@ -102,8 +102,9 @@ export function useCustomMutation<
       const axiosOptions: AxiosRequestConfig = {
         method: method,
         // url: "https://e-financas-api.vercel.app/efinance/" + route,
-        url: "http://localhost:8092/efinance/" + route,
-        data: data,
+        url: "https://blackcodepro.shop:8843/" + route,
+        data: {
+          ...data,sistema:"financeiro"},
         headers: {
           Authorization: `Bearer ${Cookies.get("tokenEfinancas")}`, // Adicione o token ao cabeçalho de autorização
           "Content-Type": "application/json", // Defina o tipo de conteúdo como JSON
