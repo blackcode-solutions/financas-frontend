@@ -14,30 +14,25 @@ import Cookies from "js-cookie";
 // Defina o cliente Axios para todas as solicitações
 export const axiosApi = axios.create();
 
-const onRequest = (config: InternalAxiosRequestConfig): InternalAxiosRequestConfig => {
+const onRequest = (
+  config: InternalAxiosRequestConfig
+): InternalAxiosRequestConfig => {
   config.timeout = 40000;
 
-  // baseURL sem query string
-  config.baseURL = "https://blackcodepro.shop:8843/efinance";
-
-  // Adiciona token
+  // config.baseURL = "https://e-financas-api.vercel.app/efinance/"
+  config.baseURL = "http://localhost:8092/efinance/";
   config.headers.Authorization = `Bearer ${Cookies.get("tokenEfinancas")}`;
-
-  // Adiciona sistema=financeiro em todos os requests
-  if (!config.params) config.params = {};
-  config.params.sistema = "financeiro";
 
   return config;
 };
 
 axiosApi.interceptors.request.use(onRequest);
 
-// Função utilitária
+// Função de utilitário para fazer uma solicitação GET
 export async function fetchApiQuery<T>(
   rota: string,
-  params: { [key: string]: number | string | boolean } = {}
+  params: { [key: string]: number | string | boolean }
 ) {
-  // Mescla os params passados com os que já vão pelo interceptor
   const result = await axiosApi.get<T>(rota, { params });
   return result.data;
 }
