@@ -27,6 +27,12 @@ const onRequest = (
   ...config.params, // se config.params for undefined, o spread funciona normalmente
   sistema: "financeiro",
 };
+ if (config.method === "post" || config.method === "put" || config.method === "delete") {
+    config.data = {
+      ...config.data,
+      sistema: "financeiro",
+    };
+  }
   return config;
 };
 
