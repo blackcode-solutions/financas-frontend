@@ -20,7 +20,7 @@ const onRequest = (
   config.timeout = 40000;
 
   // config.baseURL = "https://e-financas-api.vercel.app/efinance/"
-  config.baseURL = "http://localhost:8092/efinance/";
+  config.baseURL = "https://blackcodepro.shop:8843/efinance/";
   config.headers.Authorization = `Bearer ${Cookies.get("tokenEfinancas")}`;
   if(!config.params)config.params = {}
   config.params = {
