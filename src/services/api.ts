@@ -22,7 +22,11 @@ const onRequest = (
   // config.baseURL = "https://e-financas-api.vercel.app/efinance/"
   config.baseURL = "http://localhost:8092/efinance/";
   config.headers.Authorization = `Bearer ${Cookies.get("tokenEfinancas")}`;
-
+  if(!config.params)config.params = {}
+  config.params = {
+  ...config.params, // se config.params for undefined, o spread funciona normalmente
+  sistema: "financeiro",
+};
   return config;
 };
 
