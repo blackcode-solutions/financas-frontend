@@ -102,7 +102,7 @@ export function useCustomMutation<
       const axiosOptions: AxiosRequestConfig = {
         method: method,
         // url: "https://e-financas-api.vercel.app/efinance/" + route,
-        url: "https://blackcodepro.shop:8843/" + route,
+        url: "https://blackcodepro.shop:8843/efinance/" + route,
         data: {
           ...data,sistema:"financeiro"},
         headers: {
