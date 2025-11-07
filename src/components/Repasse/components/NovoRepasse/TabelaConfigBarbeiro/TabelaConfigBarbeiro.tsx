@@ -3,11 +3,11 @@ import { AgGridReact } from "ag-grid-react";
 import styles from "./styleConfigBarbeiro.module.scss";
 import { AG_GRID_LOCALE_PT_BR } from "@/interfaces/Table";
 import { useQueryClient } from "@tanstack/react-query";
-import { useListarConfigBarbeiro } from "@/components/Repasse/hooks/useListarConfigBarbeiro";
 import { ModalAcao } from "@/components/ModalAcao/ModalAcao";
 import { MdDelete } from "react-icons/md";
 import { Tooltip } from "rsuite";
 import { useRemoverUsuarioConfigRepasse } from "../../TabelaConfigBarbeiro/useRemoverUsuarioConfigRepasse";
+import { useListarConfigBarbeiroModal } from "./useListarConfigBarbeiro";
 
 interface TableConfigBarbeiroProps {
   idRepasse:any;
@@ -17,7 +17,7 @@ export function TabelaConfigBarbeiro({ idRepasse }: TableConfigBarbeiroProps) {
   const queryClient = useQueryClient();
     const [selectedRow,setSelectedRow] = useState<any>({})
     const { FnRemoverUsuarioConfig } = useRemoverUsuarioConfigRepasse()
-   const listaConfigRepasseBarbeiro = useListarConfigBarbeiro(idRepasse);
+   const listaConfigRepasseBarbeiro = useListarConfigBarbeiroModal(idRepasse);
    const [openModalAcao,setOpenModalAcao] = useState(false)
 
   const cellStyle = (params: any) => {
@@ -96,7 +96,7 @@ export function TabelaConfigBarbeiro({ idRepasse }: TableConfigBarbeiroProps) {
 
   useEffect(() => {
     if(idRepasse){
-      queryClient.refetchQueries({ queryKey: ["usuariosConfRepasse"] });
+      queryClient.refetchQueries({ queryKey: ["usuariosConfRepasseModal"] });
     }
 
   },[idRepasse])
@@ -113,7 +113,7 @@ export function TabelaConfigBarbeiro({ idRepasse }: TableConfigBarbeiroProps) {
                     FnRemoverUsuarioConfig({
                       usuarioConfiguracaoRepasseId:selectedRow?.usuarioConfiguracaoRepasseId,
                       usuarioId  :selectedRow?.usuarioId
-                    })
+                    },'usuariosConfRepasseModal')
         
                     setTimeout(() => {
                       setOpenModalAcao(false);

@@ -16,7 +16,7 @@ export function useRemoverUsuarioConfigRepasse() {
     route: "usuariosConfRepasse/deletar",
   });
 
-  function FnRemoverUsuarioConfig(dados:Omit<FormData,'empresaId'>) {
+  function FnRemoverUsuarioConfig(dados:Omit<FormData,'empresaId'>,textroRemover:string) {
     
     delRemoverUsuarioConfig.mutate(dados, {
       onSuccess(data: any) {

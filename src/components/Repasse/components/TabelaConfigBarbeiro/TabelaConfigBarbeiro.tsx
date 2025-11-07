@@ -113,7 +113,7 @@ export function TabelaConfigBarbeiro({ selectedRowConfigRepasse }: TableConfigBa
                 FnRemoverUsuarioConfig({
                   usuarioConfiguracaoRepasseId:selectedRow?.usuarioConfiguracaoRepasseId,
                   usuarioId  :selectedRow?.usuarioId
-                })
+                },'usuariosConfRepasse')
     
                 setTimeout(() => {
                   setOpenModalAcao(false);
