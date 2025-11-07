@@ -11,7 +11,6 @@ import {
 import Select from "react-select";
 import { useAdicionarConfigRepasse } from "../../hooks/useAdicionarConfigRepasse";
 import { useAdicionarConfigBarbeiro } from "../../hooks/useAdicionarConfigBarbeiro";
-import { useListarConfigRepasse } from "../../hooks/useListarConfigRepasse";
 import { useRef, useState } from "react";
 import { useRemoverConfigRepasse } from "../../hooks/useRemoverConfigRepasse";
 import { useListarUsuarios } from "@/components/DetalhesUsuario/CadastroUsuarios/hooks/useListarUsuarios";
@@ -23,6 +22,7 @@ import { TableConfigRepasse } from "../TableConfigRepasse/TableConfigRepasse";
 import { Dialog } from "primereact/dialog";
 import { Button } from "primereact/button";
 import { TabelaConfigBarbeiro } from "./TabelaConfigBarbeiro/TabelaConfigBarbeiro";
+import { useListarConfigRepasse } from "../../hooks/useListarConfigRepasse";
 
 export interface FormDataServico {
   empresaId: number;

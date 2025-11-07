@@ -20,7 +20,6 @@ import Select from "react-select";
 import { useListarConfigRepasse } from "./hooks/useListarConfigRepasse";
 import { useListarUsuarios } from "../DetalhesUsuario/CadastroUsuarios/hooks/useListarUsuarios";
 import { useAdicionarConfigBarbeiro } from "./hooks/useAdicionarConfigBarbeiro";
-import { useListarConfigBarbeiro } from "./hooks/useListarConfigBarbeiro";
 import NovoRepasse from "./components/NovoRepasse/NovoRepasse";
 import { FaGears } from "react-icons/fa6";
 import { useRouter } from "next/navigation";

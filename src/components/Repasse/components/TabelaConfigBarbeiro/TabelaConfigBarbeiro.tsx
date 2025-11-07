@@ -2,10 +2,9 @@ import { Dispatch, SetStateAction, useCallback, useEffect, useState } from "reac
 import { AgGridReact } from "ag-grid-react";
 import styles from "./styleConfigBarbeiro.module.scss";
 import { AG_GRID_LOCALE_PT_BR } from "@/interfaces/Table";
-import { useListarConfigRepasse } from "../../hooks/useListarConfigRepasse";
 import { FormDataServico } from "../../Repasse";
-import { useListarConfigBarbeiro } from "../../hooks/useListarConfigBarbeiro";
 import { useQueryClient } from "@tanstack/react-query";
+import { useListarConfigBarbeiro } from "../../hooks/useListarConfigBarbeiro";
 
 interface TableConfigBarbeiroProps {
   setSelectedRow:any 
