@@ -42,11 +42,11 @@ export function useAdicionarConfigRepasse() {
               },
             });
             queryClient.refetchQueries({ queryKey: ["configuracaoRepasse"] });
-            formulario.reset({
-              configuracaoRepasse: "",
-              configuracaoRepasseId: "",
-              porcentagem: "",
-            });
+            // formulario.reset({
+            //   configuracaoRepasse: "",
+            //   configuracaoRepasseId: "",
+            //   porcentagem: "",
+            // });
             setOpenForm(true);
           } else {
             Swal.fire({

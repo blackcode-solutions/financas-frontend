@@ -136,9 +136,9 @@ const NovoRepasse = ({ openModal, setOpenModal, dadosRepasse }: IProps) => {
           >
             <IoMdTrash size={18} /> Remover
           </ButtonComponent>
-          <ButtonComponent style={{ width: "160px", height: "37px" }}>
+          {/* <ButtonComponent style={{ width: "160px", height: "37px" }}>
             <MdExitToApp size={18} /> Sair
-          </ButtonComponent>
+          </ButtonComponent> */}
         </div>
       </section>
 
