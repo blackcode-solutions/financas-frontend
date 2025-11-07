@@ -8,7 +8,7 @@ import { useQueryClient } from "@tanstack/react-query";
 import { useListarConfigBarbeiro } from "@/components/Repasse/hooks/useListarConfigBarbeiro";
 
 interface TableConfigBarbeiroProps {
-  idRepasse:string;
+  idRepasse:any;
 }
 
 export function TabelaConfigBarbeiro({ idRepasse }: TableConfigBarbeiroProps) {
