@@ -77,7 +77,7 @@ export function TabelaConfigBarbeiro({ idRepasse }: TableConfigBarbeiroProps) {
         <div className={`${styles.table} ag-theme-alpine`}>
           <AgGridReact
             localeText={AG_GRID_LOCALE_PT_BR}
-            onCellClicked={cellClickedListener}
+            // onCellClicked={cellClickedListener}
             rowData={idRepasse ? listaConfigRepasseBarbeiro : []}
             // defaultColDef={defaultColDef}
             columnDefs={colDefs}
