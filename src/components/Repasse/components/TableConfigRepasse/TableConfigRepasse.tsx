@@ -2,8 +2,8 @@ import { Dispatch, SetStateAction, useCallback, useState } from "react";
 import { AgGridReact } from "ag-grid-react";
 import styles from "./stylesConfigRepasse.module.scss";
 import { AG_GRID_LOCALE_PT_BR } from "@/interfaces/Table";
-import { useListarConfigRepasse } from "../../hooks/useListarConfigRepasse";
 import { FormDataServico } from "../../Repasse";
+import { useListarConfigRepasse } from "../../hooks/useListarConfigRepasse";
 
 interface TableEmpresaProps {
   reset?: (value: any) => void;
