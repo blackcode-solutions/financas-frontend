@@ -113,27 +113,28 @@ const NovoRepasse = ({ openModal, setOpenModal, dadosRepasse }: IProps) => {
 
       <section style={{ padding: "0.4rem" }}>
         <div className={styles.containerButtons}>
-          <ButtonComponent style={{ width: "160px", height: "37px" }}>
+          <ButtonComponent 
+            onClick={()=>{
+            setValue("configuracaoRepasse",  "");
+            setValue("porcentagem", "");
+            setIdRepasse(0);
+            setOpenForm(true);
+            }}
+          style={{ width: "160px", height: "37px" }}>
             <MdAddCircle size={18} /> Novo
           </ButtonComponent>
-          <ButtonComponent style={{ width: "160px", height: "37px" }}>
-            <MdEdit size={18} /> Editar
-          </ButtonComponent>
-          <ButtonComponent style={{ width: "160px", height: "37px" }}>
+          <ButtonComponent 
+                onClick={() => FnSalvarConfigRepasse(setOpenForm, setIdRepasse,idRepasse)}
+          style={{ width: "160px", height: "37px" }}>
             <MdSave size={18} /> Salvar
           </ButtonComponent>
-          <ButtonComponent isReturn style={{ width: "160px", height: "37px" }}>
-            <MdCancel size={18} /> Cancelar
-          </ButtonComponent>
+    
           <ButtonComponent
             onClick={() => setOpenModalRemover(true)}
             isReturn
             style={{ width: "160px", height: "37px" }}
           >
             <IoMdTrash size={18} /> Remover
-          </ButtonComponent>
-          <ButtonComponent style={{ width: "160px", height: "37px" }}>
-            <MdPerson size={18} /> Usuários
           </ButtonComponent>
           <ButtonComponent style={{ width: "160px", height: "37px" }}>
             <MdExitToApp size={18} /> Sair
@@ -153,14 +154,13 @@ const NovoRepasse = ({ openModal, setOpenModal, dadosRepasse }: IProps) => {
               <label>Porcentagem</label>
               <InputComponent {...register("porcentagem")} />
             </div>
-            <div style={{ marginTop: "1rem" }}>
+            {/* <div style={{ marginTop: "1rem" }}>
               <ButtonComponent
-                onClick={() => FnSalvarConfigRepasse(setOpenForm, setIdRepasse)}
                 style={{ width: "100px", height: "38px" }}
               >
                 Salvar
               </ButtonComponent>
-            </div>
+            </div> */}
           </div>
         </fieldset>
 

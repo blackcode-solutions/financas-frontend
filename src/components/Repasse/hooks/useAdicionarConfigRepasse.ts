@@ -20,9 +20,12 @@ export function useAdicionarConfigRepasse() {
     route: "configuracaoRepasse/criar",
   });
 
-  function FnSalvarConfigRepasse(setOpenForm: Dispatch<SetStateAction<boolean>>,setIdRepasse: Dispatch<SetStateAction<number>>) {
+  function FnSalvarConfigRepasse(
+    setOpenForm: Dispatch<SetStateAction<boolean>>,
+    setIdRepasse: Dispatch<SetStateAction<number>>,idRepasse:any) {
     const submit = handleSubmit((data) => {
-      postSalvarConfigRepasse.mutate(data, {
+      postSalvarConfigRepasse.mutate({
+        ...data,configuracaoRepasseId:idRepasse ? idRepasse : ''}, {
         onSuccess(data: any) {
           if (data.type == "success") {
             // formulario.setValue("empresaId", data.idCriado);
