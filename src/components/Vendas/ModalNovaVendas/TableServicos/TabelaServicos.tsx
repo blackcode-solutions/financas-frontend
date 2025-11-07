@@ -6,7 +6,7 @@ import { Tooltip } from "primereact/tooltip";
 import { IoMdTrash } from "react-icons/io";
 import { ToolTipTrash } from "@/components/Icons/ToolTipTrash";
 import { formatarDinheiro } from "@/helpers/convertNumberToMoney";
-import { ModalRemover } from "./ModalRemover";
+// import { ModalRemover } from "./ModalRemover";
 import { useListarServicosVendas } from "./useListarServicosVendas";
 import { ModalAcao } from "@/components/ModalAcao/ModalAcao";
 import { useRemoverServicoVenda } from "./ModalRemover/hooks/useRemoverServicoVenda";

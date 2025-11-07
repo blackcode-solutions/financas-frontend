@@ -2,7 +2,7 @@ import { modalOpen } from "@/interfaces/modalOpen";
 import { Dialog } from "primereact/dialog";
 import styles from "./styles.module.scss";
 import { Button } from "primereact/button";
-import { useRemoverItemVenda } from "./hooks/useRemoverServicoVenda";
+//import { useRemoverItemVenda } from "./hooks/useRemoverServicoVenda";
 
 interface ModalRemoverProps extends modalOpen {
   vendaId:number;
@@ -16,7 +16,7 @@ export function ModalRemover({
   setOpenModal,vendaId,produtoId
 }: ModalRemoverProps) {
 
-  const { FnRemoverProdutosVendas } = useRemoverItemVenda()
+  //const { FnRemoverProdutosVendas } = useRemoverItemVenda()
 
   const footerContent = (
     <div>
@@ -35,9 +35,9 @@ export function ModalRemover({
         color="green"
         icon="pi pi-check"
         autoFocus
-        onClick={()=>{
-          FnRemoverProdutosVendas({produtoVendaId,vendaId,produtoId,quantidade,handleClose:() => setOpenModal(false)})
-        }}
+        // onClick={()=>{
+        //   FnRemoverProdutosVendas({produtoVendaId,vendaId,produtoId,quantidade,handleClose:() => setOpenModal(false)})
+        // }}
       />
     </div>
   );

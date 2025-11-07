@@ -35,9 +35,9 @@ export function ModalRemover({
         color="green"
         icon="pi pi-check"
         autoFocus
-        onClick={()=>{
-          FnRemoverServicoVendas({produtoVendaId,vendaId,produtoId,quantidade,handleClose:() => setOpenModal(false)})
-        }}
+        // onClick={()=>{
+        //   FnRemoverProdutosVendas({produtoVendaId,vendaId,produtoId,quantidade,handleClose:() => setOpenModal(false)})
+        // }}
       />
     </div>
   );

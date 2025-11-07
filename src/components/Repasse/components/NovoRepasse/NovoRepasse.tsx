@@ -299,7 +299,7 @@ const NovoRepasse = ({ openModal, setOpenModal }: IProps) => {
             </div>
           </fieldset>
           <div>
-            <TabelaConfigBarbeiro setSelectedRow={setSelectedRow} selectedRowConfigRepasse={selectedRow}/>
+            <TabelaConfigBarbeiro idRepasse={idRepasse} />
           </div>
         </section>
       </div>
