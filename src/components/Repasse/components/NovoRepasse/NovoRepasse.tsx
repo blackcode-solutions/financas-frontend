@@ -20,9 +20,9 @@ import ButtonComponent from "@/components/ButtonComponent";
 import styles from "./styleRepasse.module.scss";
 import InputComponent from "@/components/InputComponent";
 import { TableConfigRepasse } from "../TableConfigRepasse/TableConfigRepasse";
-import { TabelaConfigBarbeiro } from "../TabelaConfigBarbeiro/TabelaConfigBarbeiro";
 import { Dialog } from "primereact/dialog";
 import { Button } from "primereact/button";
+import { TabelaConfigBarbeiro } from "./TabelaConfigBarbeiro/TabelaConfigBarbeiro";
 
 export interface FormDataServico {
   empresaId: number;

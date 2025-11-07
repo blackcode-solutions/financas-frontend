@@ -8,12 +8,13 @@ import { useListarConfigBarbeiro } from "../../hooks/useListarConfigBarbeiro";
 import { useQueryClient } from "@tanstack/react-query";
 
 interface TableConfigBarbeiroProps {
-  idRepasse:any;
+  setSelectedRow:any 
+  selectedRowConfigRepasse:any;
 }
 
-export function TabelaConfigBarbeiro({ idRepasse }: TableConfigBarbeiroProps) {
+export function TabelaConfigBarbeiro({ selectedRowConfigRepasse,setSelectedRow }: TableConfigBarbeiroProps) {
   const queryClient = useQueryClient();
-   const listaConfigRepasseBarbeiro = useListarConfigBarbeiro(idRepasse);
+   const listaConfigRepasseBarbeiro = useListarConfigBarbeiro(selectedRowConfigRepasse?.configuracaoRepasseId);
  
   const cellStyle = (params: any) => {
     return {
@@ -66,11 +67,11 @@ export function TabelaConfigBarbeiro({ idRepasse }: TableConfigBarbeiroProps) {
   // };
 
   useEffect(() => {
-    if(idRepasse){
+    if(selectedRowConfigRepasse){
       queryClient.refetchQueries({ queryKey: ["usuariosConfRepasse"] });
     }
 
-  },[idRepasse])
+  },[selectedRowConfigRepasse])
 
   return (
     <div style={{ padding: "0.4rem" }}>
@@ -80,7 +81,7 @@ export function TabelaConfigBarbeiro({ idRepasse }: TableConfigBarbeiroProps) {
           <AgGridReact
             localeText={AG_GRID_LOCALE_PT_BR}
             onCellClicked={cellClickedListener}
-            rowData={idRepasse ? listaConfigRepasseBarbeiro : []}
+            rowData={selectedRowConfigRepasse ? listaConfigRepasseBarbeiro : []}
             // defaultColDef={defaultColDef}
             columnDefs={colDefs}
           />
