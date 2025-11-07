@@ -99,7 +99,7 @@ const NovoRepasse = ({ openModal, setOpenModal, dadosRepasse }: IProps) => {
       onHide={() => setOpenModal(false)}
       style={{ padding: 0 }}
     >
-      {openModalRemover && (
+      {/* {openModalRemover && (
         <ModalAcao
           openModal={openModalRemover}
           setOpenModal={setOpenModalRemover}
@@ -109,7 +109,7 @@ const NovoRepasse = ({ openModal, setOpenModal, dadosRepasse }: IProps) => {
           textHeader="Remover"
           text="Deseja realmente excluir essa configuração?"
         />
-      )}
+      )} */}
 
       <section style={{ padding: "0.4rem" }}>
         <div className={styles.containerButtons}>
@@ -129,13 +129,13 @@ const NovoRepasse = ({ openModal, setOpenModal, dadosRepasse }: IProps) => {
             <MdSave size={18} /> Salvar
           </ButtonComponent>
     
-          <ButtonComponent
+          {/* <ButtonComponent
             onClick={() => setOpenModalRemover(true)}
             isReturn
             style={{ width: "160px", height: "37px" }}
           >
             <IoMdTrash size={18} /> Remover
-          </ButtonComponent>
+          </ButtonComponent> */}
           {/* <ButtonComponent style={{ width: "160px", height: "37px" }}>
             <MdExitToApp size={18} /> Sair
           </ButtonComponent> */}

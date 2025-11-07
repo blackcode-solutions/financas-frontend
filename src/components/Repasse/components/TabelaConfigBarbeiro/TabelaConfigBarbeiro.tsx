@@ -5,16 +5,21 @@ import { AG_GRID_LOCALE_PT_BR } from "@/interfaces/Table";
 import { FormDataServico } from "../../Repasse";
 import { useQueryClient } from "@tanstack/react-query";
 import { useListarConfigBarbeiro } from "../../hooks/useListarConfigBarbeiro";
+import { Tooltip } from "rsuite";
+import { MdDelete } from "react-icons/md";
+import { ModalAcao } from "@/components/ModalAcao/ModalAcao";
+import { useRemoverUsuarioConfigRepasse } from "./useRemoverUsuarioConfigRepasse";
 
 interface TableConfigBarbeiroProps {
-  setSelectedRow:any 
   selectedRowConfigRepasse:any;
 }
 
-export function TabelaConfigBarbeiro({ selectedRowConfigRepasse,setSelectedRow }: TableConfigBarbeiroProps) {
+export function TabelaConfigBarbeiro({ selectedRowConfigRepasse }: TableConfigBarbeiroProps) {
   const queryClient = useQueryClient();
+  const [selectedRow,setSelectedRow] = useState<any>({})
+  const { FnRemoverUsuarioConfig } = useRemoverUsuarioConfigRepasse()
    const listaConfigRepasseBarbeiro = useListarConfigBarbeiro(selectedRowConfigRepasse?.configuracaoRepasseId);
- 
+  const [openModalAcao,setOpenModalAcao] = useState(false)
   const cellStyle = (params: any) => {
     return {
       borderBottom: "1px solid rgb(220,220,220)",
@@ -23,6 +28,30 @@ export function TabelaConfigBarbeiro({ selectedRowConfigRepasse,setSelectedRow }
   };
 
   const [colDefs, setColDefs] = useState<any>([
+    {
+      lockPosition: "left",
+      field: "",
+      resizable: false,
+      filter: true,
+      width: "50px",
+      cellStyle: cellStyle,
+      headerClass: "headerTable",
+      sortable: true,
+      cellRenderer: (_params: any) => {
+        return (
+          <div style={{ display: "flex" }}>
+            <Tooltip
+              title="Excluir"
+              onClick={() => {
+                setOpenModalAcao(true);
+              }}
+            >
+              <MdDelete color="#C94848" size={18} />
+            </Tooltip>
+          </div>
+        );
+      },
+    },
     {
       headerName: "Id",
       width: 100,
@@ -73,7 +102,26 @@ export function TabelaConfigBarbeiro({ selectedRowConfigRepasse,setSelectedRow }
   },[selectedRowConfigRepasse])
 
   return (
-    <div style={{ padding: "0.4rem" }}>
+    <>
+      {openModalAcao && (
+            <ModalAcao
+              openModal={openModalAcao}
+              setOpenModal={setOpenModalAcao}
+              textHeader="Remover"
+              text="Deseja realmente remover essa venda ?"
+              Fnhandle={() => {
+                FnRemoverUsuarioConfig({
+                  usuarioConfiguracaoRepasseId:selectedRow?.usuarioConfiguracaoRepasseId,
+                  usuarioId  :selectedRow?.usuarioId
+                })
+    
+                setTimeout(() => {
+                  setOpenModalAcao(false);
+                },500)
+              }}
+            />
+          )}
+            <div style={{ padding: "0.4rem" }}>
       <fieldset className="fieldsetContainer">
         <legend className="fieldsetTitle">Barbeiro</legend>
         <div className={`${styles.table} ag-theme-alpine`}>
@@ -87,5 +135,6 @@ export function TabelaConfigBarbeiro({ selectedRowConfigRepasse,setSelectedRow }
         </div>
       </fieldset>
     </div>
+    </>
   );
 }

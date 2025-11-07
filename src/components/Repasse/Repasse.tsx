@@ -277,7 +277,7 @@ const RepassePage = () => {
           </div>
         </fieldset> */}
         <div>
-          <TabelaConfigBarbeiro setSelectedRow={() => {}} selectedRowConfigRepasse={selectedRowConfigRepasse}/>
+          <TabelaConfigBarbeiro selectedRowConfigRepasse={selectedRowConfigRepasse}/>
         </div>
       </section>
     </div>
