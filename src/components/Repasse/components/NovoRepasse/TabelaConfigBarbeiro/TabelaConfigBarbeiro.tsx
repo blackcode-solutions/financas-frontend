@@ -108,7 +108,7 @@ export function TabelaConfigBarbeiro({ idRepasse }: TableConfigBarbeiroProps) {
                   openModal={openModalAcao}
                   setOpenModal={setOpenModalAcao}
                   textHeader="Remover"
-                  text="Deseja realmente remover essa venda ?"
+                  text="Deseja realmente remover esse usuário ?"
                   Fnhandle={() => {
                     FnRemoverUsuarioConfig({
                       usuarioConfiguracaoRepasseId:selectedRow?.usuarioConfiguracaoRepasseId,
