@@ -12,7 +12,7 @@ type FormData = {
 export function useRemoverUsuarioConfigRepasse() {
   const queryClient = useQueryClient();
   const delRemoverUsuarioConfig = useCustomMutation({
-    method: "POST",
+    method: "DELETE",
     route: "usuariosConfRepasse/deletar",
   });
 
