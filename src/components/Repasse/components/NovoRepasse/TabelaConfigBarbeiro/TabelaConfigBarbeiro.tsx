@@ -53,11 +53,11 @@ export function TabelaConfigBarbeiro({ idRepasse }: TableConfigBarbeiroProps) {
     },
   ]);
 
-  const cellClickedListener = useCallback((event: any) => {
-    setSelectedRow(event.data ?? null);
+  // const cellClickedListener = useCallback((event: any) => {
+  //   setSelectedRow(event.data ?? null);
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, []);
 
   // const defaultColDef = {
   //   flex: 1,
