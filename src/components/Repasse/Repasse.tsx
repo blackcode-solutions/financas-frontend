@@ -68,11 +68,10 @@ const RepassePage = () => {
   const { register, reset, watch } = formulario;
   const { FnRemoverConfigRepasse } = useRemoverConfigRepasse();
   const [selectedRowConfigRepasse, setSelectedRowConfigRepasse] = useState<FormDataServico | null>(null);
-  const [selectedRepasse, setSelectedRepasse] = useState<any | null>(null);
-  const [selectedUsuario, setSelectedUsuario] = useState<any | null>(null);
 
   const [openModalRemover, setOpenModalRemover] = useState(false);
   const [openModalNovo, setOpenModalNovo] = useState(false);
+  const [isEdicao, setIsEdicao] = useState(false);
 
   const optionsRepasse = listaConfigRepasse.map((option: any) => ({
     value: option.configuracaoRepasseId,
@@ -109,6 +108,7 @@ const RepassePage = () => {
       <NovoRepasse
       setOpenModal={setOpenModalNovo}
       openModal={openModalNovo}
+      dadosRepasse={isEdicao && selectedRowConfigRepasse ? selectedRowConfigRepasse : null}
       />
     )}
 
@@ -117,6 +117,7 @@ const RepassePage = () => {
           <ButtonComponent
             // isDisable={habilitarFormulario}
              onClick={()=>{
+                setIsEdicao(false)
              setOpenModalNovo(true);
             }}
             style={{ width: "160px", height: "37px" }}
@@ -124,8 +125,11 @@ const RepassePage = () => {
             <MdAddCircle size={18} /> Novo
           </ButtonComponent>
           <ButtonComponent
-            // isDisable={!watch("empresaId")}
-            // onClick={()=>setHabilitarFormulario(true)}
+              onClick={()=>{
+                setIsEdicao(true)
+             setOpenModalNovo(true);
+            }}
+            isDisable={!selectedRowConfigRepasse?.configuracaoRepasseId}
             style={{ width: "160px", height: "37px" }}
           >
             <MdEdit size={18} /> Editar
