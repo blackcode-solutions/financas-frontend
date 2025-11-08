@@ -40,7 +40,7 @@ export function LoginPage() {
       <main className={styles.containerMain}>
         <div className={styles.containerMessage}>
           <Image
-            src={"/softwareLogin.svg"}
+            src={"/login.svg"}
             alt="Software de gestão de finanças"
             width={460}
             height={420}
@@ -115,7 +115,6 @@ export function LoginPage() {
                             width: "100%",
                             fontWeight: "600",
                             height: "55px",
-                           
                           }}
                         >
                           Entrar
